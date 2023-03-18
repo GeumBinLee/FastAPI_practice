@@ -30,7 +30,8 @@ def read_root():
 
 
 @app.get("/items/{item_id}") # "/items/{item_id}" 경로로 HTTP requests(GET)를 받는다.
-def read_item(item_id: int, q: Union[str, None] = None): # 그떄 int 타입인 item_id가 매개변수로 필요하다. q는 optional.
+def read_item(item_id: int, q: Union[str, None] = None): # 그떄 int 타입인 item_id가 매개변수로 필요하다.
+    # q는 optional. optional은 =None으로 선언된다.
     return {"item_id": item_id, "q": q}
 
 '''
